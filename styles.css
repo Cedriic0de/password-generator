@@ -1,0 +1,96 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body{
+    position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: rgb(15, 15, 15);
+   color: #fff;
+   font-family: 'Rajdhani', monospace;
+   font-weight: lighter;
+}
+h6{
+    letter-spacing: 1px;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 0;
+}
+.container{
+    background-color: rgba(33, 33, 37, 0.7);
+    padding: 28px;
+    margin: auto;
+    width: 120%;
+}
+.password-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto 20px auto;
+}
+input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(211, 210, 210);
+    color: #000;
+    border: none;
+    outline: none;
+    font-family: 'Rajdhani', monospace;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+#rangeInput{
+    float: right;
+    font-size: 1.3em;
+    font-weight: 900;
+    color: #2be4a0;
+}
+
+/* Slider */
+.slidercontainer{
+    width: 100%;
+}
+.slider{
+    -webkit-appearance: none;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background:rgb(0, 0, 0);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+   transition: opacity .2s
+}
+.slider:hover{
+    opacity: 1;
+}
+.slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #2be4a0;
+    cursor: pointer;
+}
+/* Buttons */
+.btn-copy{
+    background-color: #2be4a0;
+    border: none;
+    padding: 12px;
+}
+.btn-submit{
+    font-size: 1em;
+    padding: 10px 12px;
+    margin: .8em auto;
+    width: 100%;
+    border: none;
+    background-color: #2be4a0;
+    cursor: pointer;
+}
+.btn-submit:hover, .btn-copy:hover{
+    color: #fff;
+    opacity: 0.8;
+}
