@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 body{
-    position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
    background-color: rgb(15, 15, 15);
    color: #fff;
    font-family: 'Rajdhani', monospace;
@@ -20,10 +16,13 @@ h6{
     margin: 0;
 }
 .container{
+     position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
     background-color: rgba(33, 33, 37, 0.7);
     padding: 28px;
     margin: auto;
-    width: 120%;
 }
 .password-container{
     display: flex;
@@ -93,4 +92,15 @@ input[type="text"]{
 .btn-submit:hover, .btn-copy:hover{
     color: #fff;
     opacity: 0.8;
+}
+/* On Mobile */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 100% !important;
+        margin: auto;
+    }
+    h6 {
+        font-size: 1em;
+    }
+
 }
