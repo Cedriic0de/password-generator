@@ -4,10 +4,7 @@
     box-sizing: border-box;
 }
 body{
-<<<<<<< HEAD
     
-=======
->>>>>>> d9eddf5048d52f758d06e1a1bce0c9a1aece655f
    background-color: rgb(15, 15, 15);
    color: #fff;
    font-family: 'Rajdhani', monospace;
@@ -19,23 +16,6 @@ h6{
     text-align: center;
     margin: 0;
 }
-<<<<<<< HEAD
-=======
-.container{
-     position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-    background-color: rgba(33, 33, 37, 0.7);
-    padding: 28px;
-    margin: auto;
-}
-.password-container{
-    display: flex;
-    justify-content: space-between;
-    margin: 15px auto 20px auto;
-}
->>>>>>> d9eddf5048d52f758d06e1a1bce0c9a1aece655f
 input[type="text"]{
     width: 100%;
     padding: 10px;
@@ -121,25 +101,14 @@ input[type="text"]{
     color: #fff;
     opacity: 0.8;
 }
-<<<<<<< HEAD
 
 @media screen and (max-width: 480px) {
     .container {
         width: 90%;
-=======
-/* On Mobile */
-@media screen and (max-width: 480px) {
-    .container {
-        width: 100% !important;
->>>>>>> d9eddf5048d52f758d06e1a1bce0c9a1aece655f
         margin: auto;
     }
     h6 {
         font-size: 1em;
     }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d9eddf5048d52f758d06e1a1bce0c9a1aece655f
