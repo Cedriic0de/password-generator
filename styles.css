@@ -4,10 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    position: absolute;
-   top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
+    
    background-color: rgb(15, 15, 15);
    color: #fff;
    font-family: 'Rajdhani', monospace;
@@ -18,17 +15,6 @@ h6{
     vertical-align: baseline;
     text-align: center;
     margin: 0;
-}
-.container{
-    background-color: rgba(33, 33, 37, 0.7);
-    padding: 28px;
-    margin: auto;
-    width: 120%;
-}
-.password-container{
-    display: flex;
-    justify-content: space-between;
-    margin: 15px auto 20px auto;
 }
 input[type="text"]{
     width: 100%;
@@ -41,6 +27,25 @@ input[type="text"]{
     font-weight: bold;
     font-size: 1.3em;
 }
+.btn-copy,
+.btn-submit,
+.slider::-webkit-slider-thumb {
+    background-color: #2be4a0;
+}
+.container{
+    background-color: rgba(33, 33, 37, 0.7);
+    padding: 28px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.password-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto 20px auto;
+}
 
 #rangeInput{
     float: right;
@@ -50,7 +55,7 @@ input[type="text"]{
 }
 
 /* Slider */
-.slidercontainer{
+.slider-container{
     width: 100%;
 }
 .slider{
@@ -72,12 +77,13 @@ input[type="text"]{
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: #2be4a0;
     cursor: pointer;
+}
+.strength {
+    margin: 1em auto;
 }
 /* Buttons */
 .btn-copy{
-    background-color: #2be4a0;
     border: none;
     padding: 12px;
 }
@@ -87,10 +93,22 @@ input[type="text"]{
     margin: .8em auto;
     width: 100%;
     border: none;
-    background-color: #2be4a0;
     cursor: pointer;
 }
+
+
 .btn-submit:hover, .btn-copy:hover{
     color: #fff;
     opacity: 0.8;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+    h6 {
+        font-size: 1em;
+    }
+
 }

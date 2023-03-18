@@ -1,23 +1,39 @@
-var password = document.getElementById("password");
+const submitBtn = document.querySelector(".btn-submit");
+const passwordInput = document.getElementById("password");
+const rangeInput = document.getElementById("rangeInput");
+const btnCopy = document.querySelector(".btn-copy");
+const strength = document.querySelector(".strength");
+
+// Event Listeners
+btnCopy.addEventListener("click", copyPassword);
+submitBtn.addEventListener("click", genPassword);
 
 // Generate Password
 function genPassword() {
-    var chars = "0123456789!@#$%*()/+-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var passwordLength = document.getElementById("rangeInput").value;
-    var password = "";
+    const chars = "0123456789!@#$%*/+-abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const passwordLength = rangeInput.value;
+    let password = "";
 
-    for(var i = 0; i <= passwordLength; i++){
-        var randomNumber = Math.floor(Math.random() * chars.length -1);
-        password += chars.substring(randomNumber, randomNumber -1);
+    for(let i = 1; i <= passwordLength; i++){
+        const randomNumber = Math.floor(Math.random() * chars.length);
+        password += chars[randomNumber];
     }
 
-    document.getElementById("password").value = password;
+    passwordInput.value = password;
+
+    if(password.length <= 5){
+        strength.innerHTML = "Password too short, change length";
+        strength.style.color = "red";
+    } else {
+        strength.innerHTML = "Password is strong";
+        strength.style.color = "#2be4a0";
+    }
 }
 // Copy Password
 function copyPassword() {
-    var copyText = document.getElementById("password");
+    let copyText = document.getElementById("password");
     copyText.select();
     navigator.clipboard.writeText(copyText.value);
 
-    alert("Copied password: " + copyText.value); 
+    alert(`Copied password: ${copyText.value}`); 
   }
